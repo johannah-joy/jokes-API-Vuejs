@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <title>Chuck Norris Jokes</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Chuck Norris Joke Generator</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Chuck_Norris_May_2015.jpg/439px-Chuck_Norris_May_2015.jpg" alt="A photo of Chuck Norris.">
+        <jokes @output="reveal=$event"></jokes>
+        <p v-if="reveal">{{ reveal.value }}</p>
+        <!-- <p v-for="rev in reveal">{{ rev.value }}</p> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="site.js"></script>
+</body>
+</html>
